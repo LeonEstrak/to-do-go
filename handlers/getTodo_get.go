@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetTodoEndPoint(data model.TodoList) gin.HandlerFunc {
+func GetTodoEndPoint(data *model.TodoList) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.JSON(200, data.GetAll())
 	}

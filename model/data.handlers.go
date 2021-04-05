@@ -1,7 +1,7 @@
 package model
 
-func New() *TodoList {
-	return &TodoList{
+func New() TodoList {
+	return TodoList{
 		TodoList: []Todo{},
 	}
 }
