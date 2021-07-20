@@ -7,13 +7,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func AddTodoEndPoint(data *model.TodoList) gin.HandlerFunc {
+func UpdateTodoEndPoint(data *model.TodoList) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		receivedData := model.Todo{}
 		c.Bind(&receivedData)
-		fmt.Println(receivedData)
 
-		data.Add(receivedData)
+		data.Update(receivedData)
 		fmt.Println(data)
 		c.Status(200)
 	}
