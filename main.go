@@ -23,7 +23,7 @@ func main() {
 	// Use '&' to pass the pointer reference of the variable `todoData`
 	router.GET("/todo", handlers.GetTodoEndPoint(&todoData))
 	router.POST("/todo", handlers.AddTodoEndPoint(&todoData))
-	router.POST("/deltodo", handlers.DeleteTodoEndPoint(&todoData))
 	router.PUT("/todo", handlers.UpdateTodoEndPoint(&todoData))
+	router.DELETE("/todo", handlers.DeleteTodoEndPoint(&todoData))
 	router.Run()
 }
